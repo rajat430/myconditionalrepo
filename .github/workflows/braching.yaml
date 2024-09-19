@@ -6,7 +6,7 @@ jobs:
     steps:
       - name: devtask
         if: ${{ github.ref == 'refs/heads/dev' }}
-        run: echo "running task for dev branch"
+        run: echo "running task for dev branch code"
       - name: testtask
         if: ${{ github.ref == 'refs/heads/test' }}
         run: echo "running task for test branch"
