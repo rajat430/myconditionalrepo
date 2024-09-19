@@ -6,7 +6,7 @@ jobs:
     steps:
       - name: task1
         id: taskid1
-        run: echo "hello" 
+        run: echo hello" 
       - name: task2
         if: failure() && steps.taskid1.outcome == 'failure'
         run: echo "run only if task1 fails"
