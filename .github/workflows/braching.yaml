@@ -1,0 +1,15 @@
+name: workflow2
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: devtask
+        if: ${{ github.ref == 'refs/heads/dev' }}
+        run: echo "running task for dev branch"
+      - name: testtask
+        if: ${{ github.ref == 'refs/heads/test' }}
+        run: echo "running task for test branch"
+      - name: prod
+        if: ${{ github.ref == 'refs/heads/master' }}
+        run: echo "running task for master branch"
